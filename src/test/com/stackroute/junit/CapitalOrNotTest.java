@@ -1,46 +1,52 @@
 package test.com.stackroute.junit;
 
 import main.java.com.stackroute.junit.CapitalOrNot;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class CapitalOrNotTest {
-    CapitalOrNot obj;
+    CapitalOrNot capitalornot;
     String actualresult;
     String expectedresult;
     @Before
     public void setUp()throws Exception {
-        obj = new CapitalOrNot();
+        capitalornot = new CapitalOrNot();
     }
 
     @Test
     public void checkIfSmallerCaseLetter()
     {
-        actualresult=obj.checkCharValue('c');
+        actualresult=capitalornot.checkCharValue('c');
         expectedresult = "Smallcase letter";
         assertEquals(expectedresult,actualresult);
     }
     @Test
     public void checkWhetherItisUpperCaseLetter()
     {
-        actualresult= obj.checkCharValue('C');
+        actualresult= capitalornot.checkCharValue('C');
         expectedresult="Capital letter";
         assertEquals(expectedresult,actualresult);
     }
     @Test
     public void checkWhetherItIsDigit()
     {
-        actualresult = obj.checkCharValue('6');
+        actualresult = capitalornot.checkCharValue('6');
         expectedresult = "digit";
         assertEquals(actualresult,expectedresult);
     }
     @Test
     public void checkWhetherItIsSymbol()
     {
-        actualresult = obj.checkCharValue('%');
+        actualresult = capitalornot.checkCharValue('%');
         expectedresult = "special symbol";
         assertEquals(actualresult,expectedresult);
     }
+    @After
+    public void tearDown(){
+        capitalornot = null;
+    }
+
 }

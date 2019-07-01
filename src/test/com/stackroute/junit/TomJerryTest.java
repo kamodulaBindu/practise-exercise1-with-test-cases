@@ -2,41 +2,47 @@ package test.com.stackroute.junit;
 
 import main.java.com.stackroute.junit.CapitalOrNot;
 import main.java.com.stackroute.junit.TomJerry;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class TomJerryTest {
-    TomJerry obj;
+    TomJerry tomJerry;
     String actualresult;
     String expectedresult;
     @Before
     public void setUp()throws Exception {
-        obj = new TomJerry();
+        tomJerry = new TomJerry();
     }
 
     @Test
     public void checkIfEven()
     {
-        actualresult=obj.tomOrJerry(22);
+        actualresult=tomJerry.tomOrJerry(22);
         expectedresult = "Jerry";
         assertEquals(expectedresult,actualresult);
     }
     @Test
     public void checkIfOdd()
     {
-        actualresult= obj.tomOrJerry(23);
+        actualresult= tomJerry.tomOrJerry(23);
         expectedresult="tom";
         assertEquals(expectedresult,actualresult);
     }
     @Test
     public void checkIfOddOrEven()
     {
-        actualresult = obj.tomOrJerry('@');
+        actualresult = tomJerry.tomOrJerry('@');
         expectedresult = "input is incorrect";
         assertEquals(actualresult,expectedresult);
     }
+    @After
+    public void tearDown(){
+        tomJerry   = null;
+    }
+
 
 }
 

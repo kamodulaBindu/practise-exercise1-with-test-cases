@@ -1,7 +1,7 @@
 package main.java.com.stackroute.junit;
 
 import java.util.Scanner;
-
+//method to print jerry if even and inbetween 20 and 30 or tom if it is odd and between 20 and 30
 public class TomJerry {
 
 

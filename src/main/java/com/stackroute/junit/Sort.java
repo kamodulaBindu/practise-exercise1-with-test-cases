@@ -1,5 +1,5 @@
 package main.java.com.stackroute.junit;
-
+// metod to sort an unordered to non-ascending order and calculate the sum of even numbers
 public class Sort {
 
     public static String sortingList(int[] array) {
@@ -7,7 +7,7 @@ public class Sort {
         int sum = 0;
         String s;
         int n = array.length;
-        for (i = 0; i < n - 1; i++) {
+        for (i = 0; i < n - 1; i++) {//sorting
             for (j = i; j < n - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     swap = array[j];
@@ -22,7 +22,7 @@ public class Sort {
         }
 
         s = "sorted list of elements";
-        for (i = n - 1; i >= 0; i--)
+        for (i = n - 1; i >= 0; i--)//sorting
             System.out.println(array[i]);
         System.out.println();
         for (i = 0; i < n; i++) {
@@ -30,7 +30,7 @@ public class Sort {
                 sum = sum + array[i];
             }
         }
-        s = "sum of the even numbers is" + sum;
+        s = "sum of the even numbers is" + sum;//calculating the sum
         if (sum > 15) {
             System.out.println("true");
         } else {

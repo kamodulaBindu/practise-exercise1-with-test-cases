@@ -2,7 +2,7 @@ package main.java.com.stackroute.junit;
 
 public class RepetitiveChars {
 
-
+//method to print repetitive characters
     public static String repetitionOfChars(String str, int n) {
         int len = str.length();
         String s=str;

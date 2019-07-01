@@ -2,19 +2,19 @@ package main.java.com.stackroute.junit;
 
 public class ConstantVowel {
 
-
+//method to check whether the input character given is consonant or a vowel
     public static String vowelOrConsonant(String word) {
         int i;
-        String s = "";
+        String str = "";
         int len = word.length();
         for (i = 0; i < len; i++) {
-            char c = word.charAt(i);
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                s = "vowel";
-            } else {
-                s = "consonant";
+            char input = word.charAt(i);//to check if the character input is vowel
+            if (input == 'a' || input == 'e' || input == 'i' || input == 'o' || input == 'u') {
+                str = "vowel";
+            } else { //to check if the character input is consonant
+                str = "consonant";
             }
         }
-        return s;
+        return str;
     }
 }

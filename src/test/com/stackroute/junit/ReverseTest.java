@@ -1,26 +1,32 @@
 package test.com.stackroute.junit;
 
 import main.java.com.stackroute.junit.Reverse;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ReverseTest {
-    Reverse obj;
+    Reverse reverse;
     String actualresult;
     String expectedresult;
     @Before
     public void setUp()throws Exception {
-        obj = new Reverse();
+        reverse = new Reverse();
     }
 
     @Test
     public void checkIfSmallerCaseLetter()
     {
-        actualresult=obj.stringReverse("london");
+        actualresult=reverse.stringReverse("london");
         expectedresult = " nodnol";
         assertEquals(expectedresult,actualresult);
     }
+    @After
+    public void tearDown(){
+        reverse = null;
+    }
+
 
 }

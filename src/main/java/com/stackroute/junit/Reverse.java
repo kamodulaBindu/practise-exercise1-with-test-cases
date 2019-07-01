@@ -1,7 +1,7 @@
 package main.java.com.stackroute.junit;
 
 import java.util.Scanner;
-
+//metod to print reverse of a string
 public class Reverse {
 
     public static String  stringReverse(String str) {
